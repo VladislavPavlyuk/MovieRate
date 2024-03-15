@@ -1,0 +1,50 @@
+﻿<div style="padding-top:30px">
+    <h3>Десять лучших фильмов</h3>
+    <table class="table">
+        <tr>
+            <td>
+                <p>Название фильма</p>
+            </td>
+            <td>
+                <p>Режиссер</p>
+            </td>
+            <td>
+                <p>Жанр</p>
+            </td>
+            <td>
+                <p>Год выпуска</p>
+            </td>
+            <td>
+                <p>Постер</p>
+            </td>
+            <td>
+                <p>Краткое описание</p>
+            </td>
+        </tr>
+        @foreach (var m in ViewBag.Movies)
+        {
+            <tr>
+                <td>
+                    <p>@m.Title</p>
+                </td>
+                <td>
+                    <p>@m.Director</p>
+                </td>
+                <td>
+                    <p>@m.Genre</p>
+                </td>
+                <td>
+                    <p>@m.Release</p>
+                </td>
+                <td>
+                    <p>
+                        <img src="@m.Poster" alt="Cover" width="100px" />
+                    </p>
+                </td>
+                <td>
+                    <p>@m.Description</p>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
